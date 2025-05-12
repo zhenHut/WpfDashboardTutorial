@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace WpfDashboardTutorial
+namespace WpfDashboardTutorial.Commands
 {
     /// <summary>
     /// RelayCommand allows you to inject the command´s logic via delegates 
@@ -48,7 +48,7 @@ namespace WpfDashboardTutorial
         #region Methods
         public bool CanExecute(object? parameter)
         {
-            return CanExecute == null || CanExecute(parameter);
+            return _canExecute == null || _canExecute(parameter);
         }
 
         public void Execute(object? parameter)

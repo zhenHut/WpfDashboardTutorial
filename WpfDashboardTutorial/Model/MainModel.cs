@@ -49,7 +49,7 @@ namespace WpfDashboardTutorial.Model
     }
 
     // Download Page
-    public class Download
+    public class DownloadItems
     {
         public string DownloadName { get; set; }
         public string DownloadImage { get; set; }
